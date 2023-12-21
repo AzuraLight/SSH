@@ -30,7 +30,7 @@ public class SSHKeySessionManager implements AutoCloseable {
         try {
             JSch jsch = new JSch();
 
-            // 공개키 파일의 경로를 지정
+            // 개인 키 파일의 경로를 지정
             String privateKeyPath = sshConfig.getPrivateKeyPath();
             jsch.addIdentity(privateKeyPath);
 
