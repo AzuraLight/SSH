@@ -15,11 +15,20 @@ public class SSHConfig {
     String password;
     int port;
 
+    private String privateKeyPath;
+
     public SSHConfig(String username, String hostname, String password, int port) {
         this.username = username;
         this.hostname = hostname;
         this.password = password;
         this.port = port;
+    }
+
+    public SSHConfig(String username, String hostname, int port, String privateKeyPath) {
+        this.username = username;
+        this.hostname = hostname;
+        this.port = port;
+        this.privateKeyPath = privateKeyPath;
     }
 
     // Getter
@@ -37,5 +46,9 @@ public class SSHConfig {
 
     public int getPort() {
         return port;
+    }
+
+    public String getPrivateKeyPath() {
+        return privateKeyPath;
     }
 }

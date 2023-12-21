@@ -12,12 +12,21 @@
 
 ## 사용 방법
 
-### SSH 세션 관리
+### SSH 세션 관리 - 비밀번호 인증
 
-`SSHSessionManager` 클래스는 SSH 세션을 관리합니다. 이 클래스는 세션 연결 및 종료를 캡슐화합니다.
+`SSHSessionManager` 클래스는 SSH 세션을 관리합니다. 이 클래스는 비밀번호 인증을 활용하여 세션 연결 및 종료를 캡슐화합니다.
 
 ```java
 SSHSessionManager sessionManager = new SSHSessionManager(configUtil);
+Session session = sessionManager.getSession();
+```
+
+### SSH 세션 관리 - 키 인증
+
+`SSHKeySessionManager` 클래스는 SSH 세션을 관리합니다. 이 클래스는 키 인증을 활용하여 세션 연결 및 종료를 캡슐화합니다.
+
+```java
+SSHKeySessionManager sessionManager = new SSHSessionManager(configUtil);
 Session session = sessionManager.getSession();
 ```
 
@@ -64,7 +73,16 @@ ConfigUtil configUtil = ConfigUtil.getInstance();
 이 프로젝트를 사용하기 위해서는 Java와 JSch 라이브러리가 필요합니다.
 
 JSch 라이브러리를 다운로드하고 프로젝트에 포함시킵니다.
+
+키 인증을 사용 할 때는 아래의 코드를 활용하여 키를 생성하고, 로컬에 키를 복사 후 설정을 추가합니다.
+
+```bash
+ssh-keygen -t rsa -b 4096 -m pem
+cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+```
+
 이 레포지토리를 클론하거나 다운로드합니다.
+
 config.properties 파일에 필요한 설정을 추가합니다.
 
 ## 라이센스

@@ -49,6 +49,14 @@ public class ConfigUtil {
         return new SSHConfig(username, hostname, password, port);
     }
 
+    public SSHConfig loadSSHConfigWithKey() {
+        String username = getProperty("username");
+        String hostname = getProperty("hostname");
+        int port = Integer.parseInt(getProperty("port"));
+        String privateKeyPath = getProperty("privateKey");
+        return new SSHConfig(username, hostname, port, privateKeyPath);
+    }
+
     public PathConfig loadPathConfig() {
 
         String localUploadPath = getProperty("local.upload.path");
