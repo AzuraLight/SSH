@@ -26,7 +26,7 @@ Session session = sessionManager.getSession();
 `SSHKeySessionManager` 클래스는 SSH 세션을 관리합니다. 이 클래스는 키 인증을 활용하여 세션 연결 및 종료를 캡슐화합니다.
 
 ```java
-SSHKeySessionManager sessionManager = new SSHSessionManager(configUtil);
+SSHKeySessionManager sessionManager = new SSHKeySessionManager(configUtil);
 Session session = sessionManager.getSession();
 ```
 
