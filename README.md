@@ -1,6 +1,6 @@
-# SSH and SFTP Utilities
+# SSH and SFTP Examples with Utilities
 
-이 프로젝트는 Java를 사용하여 SSH 및 SFTP 연결을 관리하기 위한 유틸리티 모음입니다. 포트 포워딩, X11 리다이렉션, 파일 전송 등의 기능을 포함하고 있습니다.
+이 프로젝트는 Java를 사용하여 SSH 및 SFTP 연결을 관리하기 위한 예제와 유틸리티 모음입니다. 포트 포워딩, X11 리다이렉션, 파일 전송 등의 기능을 포함하고 있습니다.
 
 ## 기능
 
@@ -80,6 +80,8 @@ JSch 라이브러리를 다운로드하고 프로젝트에 포함시킵니다.
 ssh-keygen -t rsa -b 4096 -m pem
 cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
 ```
+
+JSch 라이브러리를 다운로드하고 프로젝트 ROOT 아래에 lib 폴더를 만들고 이곳에 포함시킵니다. 
 
 이 레포지토리를 클론하거나 다운로드합니다.
 
