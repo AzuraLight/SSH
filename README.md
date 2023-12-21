@@ -63,7 +63,8 @@ ConfigUtil configUtil = ConfigUtil.getInstance();
 
 이 프로젝트를 사용하기 위해서는 Java와 JSch 라이브러리가 필요합니다.
 
-JSch 라이브러리를 다운로드하고 프로젝트에 포함시킵니다.
+JSch 라이브러리를 다운로드하고 프로젝트 ROOT 아래에 lib 폴더를 만들고 이곳에 포함시킵니다. 
+
 이 레포지토리를 클론하거나 다운로드합니다.
 config.properties 파일에 필요한 설정을 추가합니다.
 
